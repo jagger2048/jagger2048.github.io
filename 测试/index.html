@@ -1,0 +1,102 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>蠢华 圣诞&生日快乐</title>
+
+<style type="text/css">
+@font-face {
+    font-family: digit;
+    src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body style="background-image:" url(source\img\天空.jpg) no-repeat;>
+
+<div id="mainDiv">
+    <div id="content">
+        <div id="code"><font size="5" color="#00F" style="font-weight:bold">
+            风吹的
+                        <br>是温柔
+            <br>
+            花开的
+            <br>
+            是幸福
+            <br>
+            雪飘的
+                        <br>是甜蜜
+                        <br>月照亮的
+            <br>是你的心
+            <br>
+
+<pre><code>        风花雪月为你祝福，
+                    &lt;br /&gt;
+
+        真心真意为你送上礼物，
+                    &lt;br /&gt;
+        哇哈哈~ 祝你生日快乐
+                    &lt;br /
+        &lt;br /&gt;
+
+        &lt;br /&gt;&lt;/font&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;loveHeart&quot;&gt;
+        &lt;canvas id=&quot;garden&quot;&gt;&lt;/canvas&gt;
+        &lt;div id=&quot;words&quot;&gt;
+            &lt;div id=&quot;messages&quot;&gt;
+                圣诞&amp;生日快乐~
+                &lt;div id=&quot;elapseClock&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div id=&quot;loveu&quot;&gt;
+                &amp;nbsp&amp;nbsp&amp;nbsp晓晓的风，&lt;br /&gt;
+                                                            沙沙的雪                                                                        &lt;br/&gt;
+                &lt;div class=&quot;signature&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;copyright&quot;&gt;
+    &lt;a href=&quot;#&quot;&gt;....&lt;/a&gt;&lt;br /&gt;
+    &lt;a href=&quot;#&quot;&gt;....&lt;/a&gt;&lt;br /&gt;
+
+&lt;/div&gt;</code></pre></font></div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2015, 11, 25);
+together.setHours(0);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+    var msg = document.createElement("div");
+    msg.id = "errorMsg";
+    msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+    document.body.appendChild(msg);
+    $("#code").css("display", "none")
+    $("#copyright").css("position", "absolute");
+    $("#copyright").css("bottom", "10px");
+    document.execCommand("stop");
+} else {
+    setTimeout(function () {ther
+        startHeartAnimation();
+    }, 32000);
+
+    timeElapse(together);
+    setInterval(function () {
+        timeElapse(together);
+    }, 500);
+
+    adjustCodePosition();
+    $("#code").typewriter();
+}
+</script>
+
+</div></div></body>
